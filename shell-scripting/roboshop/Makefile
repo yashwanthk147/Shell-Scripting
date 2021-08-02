@@ -1,21 +1,21 @@
 frontend:
-    @echo Installing frontend
-catalcogue:
-    @echo Installing catalcogue
+    @echo Installing Frontend:
+catalogue:
+    @echo Installing Catalogue:
 cart:
-    @echo Installing cart
+    @echo Installing Cart:
 user:
-    @echo Installing user
+    @echo Installing User:
 shipping:
-    @echo Installing shipping
+    @echo Installing Shipping:
 payment:
-    @echo Installing payment
+    @echo Installing Payment:
 mongodb:
-    @echo Installing mongodb
+    @echo Installing Mongodb:
 redis:
-    @echo Installing redis
+    @echo Installing Redis:
 mysql:
-    @echo Installing mysql
+    @echo Installing Mysql:
 rabbitmq:
-    @echo Installing rabbitmq
+    @echo Installing Rabbitmq:
 
