@@ -15,3 +15,10 @@ echo A = $A
 DATE="2021-07-14"
 DATE=$(date+%F)
 echo welcome, Today date is $DATE
+
+#readwrite
+a=10
+echo $a
+b=20
+echo $b
+
