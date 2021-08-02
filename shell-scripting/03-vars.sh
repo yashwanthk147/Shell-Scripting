@@ -28,8 +28,6 @@ echo ${c[1]}
 
 #command substitution
 COURSE NAME = ${COURSE_NAME}
-COURSE_NAME = Devops
-export COURSE_NAME
 
 
 
