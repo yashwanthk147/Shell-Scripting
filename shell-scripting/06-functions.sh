@@ -4,14 +4,28 @@
 #}
 #sample
 
-sample(){
-  echo value of a=$a
-}
-a=100
-sample
+#sample(){
+#  echo value of a=$a
+#}
+#a=100
+#sample
+#
+#sample1(){
+#  b=566876
+#}
+#sample1
+#echo value of b=$b
 
-sample1(){
-  b=566876
+
+sample(){
+  echo value of a = $a
+  b=200
+  echo first argument in function =$1
 }
-sample1
-echo value of b=$b
+a=1000
+sample()
+echo value of b = $b
+echo First argument in function =$1
+
+  ;;
+esac
