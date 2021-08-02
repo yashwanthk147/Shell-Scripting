@@ -23,7 +23,7 @@ echo $b
 
 #array
 c=(10,70)
-echo ${b[0]}
+echo ${c[0]}
 
 
 
