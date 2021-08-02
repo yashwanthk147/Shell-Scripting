@@ -27,8 +27,9 @@ echo ${c[*]:0:2}
 echo ${c[1]}
 
 #command substitution
-COURSE_NAME = Devops
 COURSE NAME = ${COURSE_NAME}
+COURSE_NAME = Devops
+export COURSE_NAME
 
 
 
