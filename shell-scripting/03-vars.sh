@@ -21,3 +21,10 @@ echo $a
 b=20
 echo $b
 
+#array
+b=(10,20,30)
+echo ${b[1]}
+
+
+
+
