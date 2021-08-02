@@ -18,11 +18,11 @@
 
 
 sample(){
-  echo value of a =$a
+  echo value of a ={$a}
   b=200
   echo first argument in function =$1
 }
 a=1000
 sample
-echo value of b =$b
+echo value of b =${b}
 echo first argument in function =$1
