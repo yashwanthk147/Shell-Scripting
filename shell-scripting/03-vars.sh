@@ -24,7 +24,7 @@ echo $b
 #array
 c=(10,70)
 echo ${c[*]:0:2}
-echo ${c[0]}
+echo ${c[1]}
 
 
 
