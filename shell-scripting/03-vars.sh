@@ -12,3 +12,5 @@ echo $a
 
 A=10
 echo A = $A
+DATE="2021-07-14"
+echo welcome, Today date is $DATE
