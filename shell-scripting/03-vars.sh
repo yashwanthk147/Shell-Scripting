@@ -26,6 +26,10 @@ c=(10,70)
 echo ${c[*]:0:2}
 echo ${c[1]}
 
+#command substitution
+COURSE_NAME = Devops
+COURSE NAME = ${COURSE_NAME}
+
 
 
 
