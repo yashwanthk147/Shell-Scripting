@@ -9,3 +9,6 @@ a=100
 who | wc -l
 a=$(who|wc -l)
 echo $a
+
+A=10
+echo A = $A
