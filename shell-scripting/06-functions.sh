@@ -23,6 +23,6 @@ sample(){
   echo first argument in function =$1
 }
 a=1000
-sample()
+sample
 echo value of b =$b
 echo first argument in function =$1
