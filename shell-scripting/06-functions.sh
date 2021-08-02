@@ -21,8 +21,9 @@ sample(){
   echo value of a ={$a}
   b=200
   echo first argument in function =$1
+  local e =100
 }
 a=1000
-sample
+sample ABC
 echo value of b =${b}
 echo first argument in function =$1
