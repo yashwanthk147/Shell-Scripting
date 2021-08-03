@@ -15,16 +15,15 @@ fi
 PRINT() {
   echo -n -e " $1\t\t..."
 }
-
-PRINT -n -e "Installing nginx\t\t\t..."
+PRINT -n -e "Installing nginx"
 yum install nginx -y   &>>$LOG
 # if you given &> then output and error will be going in to the same files.
 STAT_CHECK $?
 
-PRINT -n -e "Enabling nginx\t\t\t..."
+PRINT -n -e "Enabling nginx"
 systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
-PRINT -n -e "Starting nginx\t\t\t..."
+PRINT -n -e "Starting nginx"
 systemctl start nginx &>>$LOG
 STAT_CHECK $?
