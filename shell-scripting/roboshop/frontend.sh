@@ -15,8 +15,8 @@ PRINT "Remove old Htdocs"
 cd /usr/share/nginx/html && rm -rf * &>>$LOG
 STAT_CHECK $?
 
-PRINT "Extract frontend archive"
-unzip /tmp/frontend.zip &>>$LOG && mv frontend-main/* &>>$LOG && mv static/* &>>$LOG &&rm -rf frontend-master static &>>$LOG
+PRINT "Extract Frontend Archive"
+unzip /tmp/frontend.zip &>>$LOG && mv frontend-main/* . &>>$LOG && mv static/* . &>>$LOG &&rm -rf frontend-master static &>>$LOG
 STAT_CHECK $?
 
 PRINT "Update roboshop config"
