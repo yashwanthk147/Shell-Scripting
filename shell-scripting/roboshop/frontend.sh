@@ -3,7 +3,7 @@
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
-STAT_CHECK{
+STAT_CHECK() {
   if [ $1 -eq 0 ]; then
   echo done
 else
