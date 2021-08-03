@@ -3,10 +3,14 @@
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
-echo -e "Installing nginx \e[32mdone\e[0m"
+echo -e "Installing nginx\t\t\t..."
 yum install nginx -y   &>>$LOG
 # if you given &> then output and error will be going in to the same files.
-echo $?
+if [$? -eq 0]; then
+  echo done
+else
+  echo fail
+fi
 
 echo "Enabling nginx"
 systemctl enable nginx &>>$LOG
