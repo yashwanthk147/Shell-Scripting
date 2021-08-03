@@ -12,7 +12,7 @@ else
 fi
 }
 
-PRINT{
+PRINT() {
   echo -n -e " $1\t\t..."
 }
 
