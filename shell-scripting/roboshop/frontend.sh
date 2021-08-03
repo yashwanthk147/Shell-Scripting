@@ -1,20 +1,7 @@
 #!/usr/bin/bash
 
-LOG=/tmp/roboshop.log
-rm -f $LOG
+Source common.sh
 
-STAT_CHECK() {
-  if [ $1 -eq 0 ]; then
-  echo done
-else
-  echo fail
-  exit 1
-fi
-}
-
-PRINT() {
-  echo -n -e " $1\t\t..."
-}
 PRINT "Installing nginx"
 yum install nginx -y   &>>$LOG
 # if you given &> then output and error will be going in to the same files.
