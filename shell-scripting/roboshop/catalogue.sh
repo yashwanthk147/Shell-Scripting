@@ -17,8 +17,8 @@ PRINT "Download Application Code"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
 STAT_CHECK $?
 
-PRINT "Extract Downloaded content"
-cd /home/roboshop && unzip -o /tmp/catalogue.zip && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm &>>$LOG
+PRINT "Extract Downloaded content"                      #remove the old content and new content to the old directory, because it shows catalogue aleready exist
+cd /home/roboshop && unzip -o /tmp/catalogue.zip &>>$LOG && rm catalogue -f mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm &>>$LOG
 #I'm running the script with root user. so, i'm getting acess denied. To overcome these i'm giving unsafe-perm
 STAT_CHECK $?
 
