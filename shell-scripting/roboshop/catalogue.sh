@@ -19,6 +19,7 @@ STAT_CHECK $?
 
 PRINT "Extract Downloaded content"
 cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm
+#I'm running the script with root user. so, i'm getting acess denied. To overcome these i'm giving unsafe-perm
 STAT_CHECK $?
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
