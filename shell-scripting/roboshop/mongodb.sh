@@ -13,7 +13,7 @@ STAT_CHECK $?
 
 PRINT "Install MongoDB\t\t"
 yum install -y mongodb-org &>>$LOG
-STAT_CHECK$?
+STAT_CHECK $?
 
 # systemctl enable mongod
 # systemctl start mongod
