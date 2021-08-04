@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-source commmon.sh
+source common.sh
 
 PRINT "Setting Up repository\t"
 echo '[mongodb-org-4.2]
