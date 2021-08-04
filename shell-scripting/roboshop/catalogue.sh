@@ -8,6 +8,10 @@ STAT_CHECK $?
 
 PRINT "Add Roboshop Application User"
 useradd roboshop &>>$LOG
+#usernot exist then adding the user
+if [ $? -ne 0]; then
+  useradd roboshop &>>$LOG
+fi
 STAT_CHECK $?
 
 
