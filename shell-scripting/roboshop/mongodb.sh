@@ -2,7 +2,7 @@
 
 source commmon.sh
 
-PRINT "Setup mongodb repository\t\t..."
+PRINT "Setting Up repository\t"
 echo '[mongodb-org-4.2]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
@@ -11,8 +11,10 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mongodb.repo
 STAT_CHECK $?
 
+PRINT "Install MongoDB\t\t"
+yum install -y mongodb-org &>>$LOG
+STAT_CHECK$?
 
-# yum install -y mongodb-org
 # systemctl enable mongod
 # systemctl start mongod
 #Update Liste IP address from 127.0.0.1 to 0.0.0.0 in config file
