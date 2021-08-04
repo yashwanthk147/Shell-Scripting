@@ -18,7 +18,7 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 STAT_CHECK $?
 
 PRINT "Extract Downloaded content"
-cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm &>>$LOG
+cd /home/roboshop && unzip -o /tmp/catalogue.zip && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm &>>$LOG
 #I'm running the script with root user. so, i'm getting acess denied. To overcome these i'm giving unsafe-perm
 STAT_CHECK $?
 
