@@ -11,9 +11,9 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mongodb.repo
 STAT_CHECK $?
 
-#PRINT "Install MongoDB\t\t"
-#yum install -y mongodb-org &>>$LOG
-#STAT_CHECK $?
+PRINT "Install MongoDB\t\t"
+yum install -y mongodb-org &>>$LOG
+STAT_CHECK $?
 #
 #PRINT "Update MongoDB Listen Address"
 #sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>$LOG
