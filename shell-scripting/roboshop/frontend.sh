@@ -23,11 +23,11 @@ PRINT "Copy RoboShop config\t"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
 STAT_CHECK $?
 
-PRINT "Update RoboShop Config\t"
-sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/' /etc/nginx/default.d/roboshop.conf
-STAT_CHECK $?
+#PRINT "Update RoboShop Config\t"
+#sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/' /etc/nginx/default.d/roboshop.conf
+#STAT_CHECK $?
 
-PRINT "Enabling Nginx\t"
+PRINT "Enabling Nginx\t\t"
 systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
