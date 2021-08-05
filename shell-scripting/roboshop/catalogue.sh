@@ -37,3 +37,4 @@ STAT_CHECK $?
 
 PRINT "Start catalogue service\t\t"
 systemctl daemon-reload &>>$LOG && systemctl start catalogue &>>$LOG && systemctl enable catalogue &>>$LOG
+STAT_CHECK $?
