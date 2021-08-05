@@ -25,12 +25,12 @@ STAT_CHECK $?
 PRINT "Install NodeJS dependencies"
 cd /home/roboshop/catalogue && npm install --unsafe-perm &>>$LOG
 STAT_CHECK $?
-#
-#PRINT "Fix Application Permissions"
+
+PRINT "Fix Application Permissions"
 ##changing the root user as roboshop user
-#chown roboshop:roboshop /home/roboshop -R  &>>$LOG
-#STAT_CHECK $?
-#
+chown roboshop:roboshop /home/roboshop -R  &>>$LOG
+STAT_CHECK $?
+
 #PRINT "setup SystemD file\t"
 #sed -i -e "s/MONGO_DNSNAME/mongodb.roboshop.internal/" /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 #STAT_CHECK $?
