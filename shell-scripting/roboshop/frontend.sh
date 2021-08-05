@@ -20,7 +20,7 @@ unzip /tmp/frontend.zip &>>$LOG && mv frontend-main/* . &>>$LOG && mv static/* .
 STAT_CHECK $?
 
 PRINT "Copy RoboShop config\t"
-mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
+mv localhost.conf /etc/nginx/default.d/roboshop.conf #&>>$LOG
 STAT_CHECK $?
 
 PRINT "Update RoboShop Config\t"
