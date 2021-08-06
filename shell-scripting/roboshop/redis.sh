@@ -10,7 +10,7 @@ PRINT "Install Redis\t"
 yum install redis -y --enablerepo=remi &>>$LOG
 
 PRINT "Update Redis Listen Address"
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf /etc/redis/redis.conf
 STAT_CHECK $?
 
 #Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf & /etc/redis/redis.conf
