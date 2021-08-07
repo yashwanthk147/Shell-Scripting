@@ -32,5 +32,5 @@ systemctl enable nginx &>>$LOG
 STAT_CHECK $?
 
 PRINT "Starting nginx\t"
-systemctl restart nginx &>>$LOG
+systemctl start nginx &>>$LOG
 STAT_CHECK $?
