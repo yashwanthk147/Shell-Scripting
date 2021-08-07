@@ -31,7 +31,7 @@ NODEJS() {
   STAT_CHECK $?
 
   PRINT "Download Application Code"
-  curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+  curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip"
   STAT_CHECK $?
 
   PRINT "Extract Downloaded code\t"                      #remove the old content and new content to the old directory, because it shows catalogue aleready exist
