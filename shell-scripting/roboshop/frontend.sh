@@ -28,9 +28,9 @@ sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/' -e '/user/ s/lo
 STAT_CHECK $?
 
 PRINT "Enabling Nginx\t\t"
-systemctl enable nginx &>>$LOG
+systemctl enable nginx  &>>$LOG
 STAT_CHECK $?
 
-PRINT "Starting nginx\t"
-systemctl restart nginx &>>$LOG
+PRINT "Starting Nginx\t\t"
+systemctl restart nginx  &>>$LOG
 STAT_CHECK $?
