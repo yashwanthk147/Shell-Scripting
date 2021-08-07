@@ -55,7 +55,6 @@ SETUP_SYSTEMD() {
   STAT_CHECK $?
 }
 
-
 NODEJS() {
   PRINT "Install NodeJS"
   yum install nodejs make gcc-c++ -y &>>$LOG
@@ -90,3 +89,4 @@ JAVA() {
   SETUP_SYSTEMD
 
 }
+
