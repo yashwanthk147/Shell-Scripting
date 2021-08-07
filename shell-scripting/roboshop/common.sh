@@ -18,7 +18,7 @@ PRINT() {
   echo -n -e "$1\t\t..."
 }
 
-ADD_APPLICCATION_USER() {
+ADD_APPLICATION_USER() {
   PRINT "Add Roboshop Application User"
   id roboshop &>>$LOG
   if [ $? -ne 0 ]; then                    #usernot exist then adding the user
@@ -60,7 +60,7 @@ NODEJS() {
   yum install nodejs make gcc-c++ -y &>>$LOG
   STAT_CHECK $?
 
-  ADD_APPLICCATION_USER
+  ADD_APPLICATION_USER
   DOWNLOAD_APP_CODE
 
   PRINT "Install NodeJS dependencies"
@@ -78,7 +78,7 @@ JAVA() {
   yum install maven -y &>>$LOG
   STAT_CHECK $?
 
-  ADD_APPLICCATION_USER
+  ADD_APPLICATION_USER
   DOWNLOAD_APP_CODE
 
   PRINT "Compile Code\t\t"
