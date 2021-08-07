@@ -83,18 +83,11 @@ JAVA() {
   ADD_APPLICCATION_USER
   DOWNLOAD_APP_CODE
 
-  PRINT "compile code"
-  cd /home/roboshop/${COMPOMNENT} && mv clean package &>>$LOG && mv target/shipping-1.0.jar shipping.jar
+  PRINT "Compile Code\t\t"
+  cd /home/roboshop/${COMPONENT} && mvn clean package &>>$LOG &&  mv target/shipping-1.0.jar shipping.jar
   STAT_CHECK $?
 
   FIX_PERMI
   SETUP_SYSTEMD
 
-
-
-#
-## mv /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service
-## systemctl daemon-reload
-## systemctl start shipping
-## systemctl enable shipping
 }
