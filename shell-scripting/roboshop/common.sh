@@ -77,7 +77,7 @@ NODEJS() {
 
 JAVA() {
   PRINT "Install Maven"
-  yum install maven -y
+  yum install maven -y &>>$LOG
   STAT_CHECK $?
 
   ADD_APPLICCATION_USER
