@@ -35,7 +35,7 @@ NODEJS() {
   STAT_CHECK $?
 
   PRINT "Extract Downloaded content"                      #remove the old content and new content to the old directory, because it shows catalogue aleready exist
-  cd /home/roboshop && unzip -o /tmp/${COMPONENT}.zip &>>$LOG && rm -rf ${COMPONENT} && mv catalogue-main ${COMPONENT}
+  cd /home/roboshop && unzip -o /tmp/${COMPONENT}.zip &>>$LOG && rm -rf ${COMPONENT} && mv ${COMPONENT}-main ${COMPONENT}
   ##I'm running the script with root user. so, i'm getting acess denied. To overcome these i'm giving unsafe-perm
   STAT_CHECK $?
 
